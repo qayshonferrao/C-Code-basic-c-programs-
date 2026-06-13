@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main(){
+    int r,c,i,j;
+    
+    printf("Enter the number of rows:");
+    scanf("%d",&r);
+    
+    printf("Enter the number of columns:");
+    scanf("%d",&c);
+    
+    int A[r][c],B[r][c],add[r][c],sub[r][c];
+    
+    printf("Enter the elements of Matrix A:");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf("%d",&A[i][j]);
+        }
+    }
+    
+    printf("Enter the elements of Matrix B:");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            scanf("%d",&B[i][j]);
+        }
+    }
+    
+    //matrix addition and subtraction
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            add[i][j]=A[i][j] + B[i][j];
+            sub[i][j]=A[i][j] - B[i][j];
+        }
+    }
+    
+    //printing output innit
+    printf("Addition:\n");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            printf("%d",add[i][j]);
+        }
+        printf("\n");
+    }
+    
+     printf("Subtraction:\n");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            printf("%d",sub[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
